@@ -1,131 +1,134 @@
+
 # SMS-Spam-Detection
-SMS Spam Detection Model
-Task Objectives
-The goal of this project is to build a machine learning model capable of classifying SMS messages as either "Spam" or "Not Spam" (Ham). The model is built using a Multinomial Naive Bayes classifier, trained on a balanced dataset. The project includes a Streamlit app that allows users to input SMS messages and get real-time predictions.
 
-Key objectives:
+## SMS Spam Detection Model
 
-Preprocess and clean the SMS text data.
+### Task Objectives
 
-Train a spam classification model using TF-IDF vectorization and Multinomial Naive Bayes.
+The goal of this project is to build a machine learning model capable of classifying SMS messages as either "Spam" or "Not Spam" (Ham). The model is built using a **Multinomial Naive Bayes** classifier, trained on a balanced dataset. The project includes a **Streamlit app** that allows users to input SMS messages and get real-time predictions.
 
-Build an interactive Streamlit application for real-time SMS spam detection.
+### Key Objectives:
+- **Preprocess and clean** the SMS text data.
+- **Train a spam classification model** using **TF-IDF vectorization** and **Multinomial Naive Bayes**.
+- **Build an interactive Streamlit application** for real-time SMS spam detection.
+- **Evaluate the model** using common metrics such as accuracy, precision, recall, and F1-score.
 
-Evaluate the model using common metrics such as accuracy, precision, recall, and F1-score.
+---
 
-Steps to Run the Project
-1. Clone the Repository
+## Steps to Run the Project
+
+### 1. Clone the Repository
 Start by cloning this repository to your local machine:
 
-bash
-Copy
-Edit
+```bash
 git clone https://github.com/your-username/sms-spam-detection.git
 cd sms-spam-detection
-2. Install Dependencies
+```
+
+### 2. Install Dependencies
+
 Create and activate a virtual environment (optional but recommended):
 
-bash
-Copy
-Edit
+```bash
 python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-Install the required dependencies using requirements.txt:
+source venv/bin/activate  # On Windows use `venv\Scriptsctivate`
+```
 
-bash
-Copy
-Edit
+Install the required dependencies using `requirements.txt`:
+
+```bash
 pip install -r requirements.txt
+```
+
 This will install the necessary libraries for the project.
 
-3. Train the Model
-To train the model and generate the necessary files (spam_classifier.pkl and vectorizer.pkl), run the following command:
+### 3. Train the Model
 
-bash
-Copy
-Edit
+To train the model and generate the necessary files (`spam_classifier.pkl` and `vectorizer.pkl`), run the following command:
+
+```bash
 python train_model.py
+```
+
 This will:
+- Load and preprocess the dataset (`spam.csv`).
+- Train a **Multinomial Naive Bayes** model using **TF-IDF** for text vectorization.
+- Save the trained model and vectorizer as `spam_classifier.pkl` and `vectorizer.pkl`.
 
-Load and preprocess the dataset (spam.csv).
+### 4. Run the Streamlit App
 
-Train a Multinomial Naive Bayes model using TF-IDF for text vectorization.
-
-Save the trained model and vectorizer as spam_classifier.pkl and vectorizer.pkl.
-
-4. Run the Streamlit App
 Once the model is trained, you can run the Streamlit app to interact with the model and classify SMS messages as spam or not.
 
 Run the following command:
 
-bash
-Copy
-Edit
+```bash
 streamlit run app.py
+```
+
 This will launch the app in your web browser. Enter a message into the text box, and the app will predict whether it is spam or not.
 
-File Structure
-train_model.py: Script for training the spam detection model.
+---
 
-app.py: Streamlit app for real-time SMS spam detection.
+## File Structure
 
-spam_classifier.pkl: The trained model file.
+- **train_model.py**: Script for training the spam detection model.
+- **app.py**: Streamlit app for real-time SMS spam detection.
+- **spam_classifier.pkl**: The trained model file.
+- **vectorizer.pkl**: The TF-IDF vectorizer used for transforming the text.
+- **spam.csv**: The dataset used for training the model.
+- **requirements.txt**: Python libraries required to run the project.
+- **README.md**: Documentation for the project.
 
-vectorizer.pkl: The TF-IDF vectorizer used for transforming the text.
+---
 
-spam.csv: The dataset used for training the model.
+## Code Quality
 
-requirements.txt: Python libraries required to run the project.
-
-README.md: Documentation for the project.
-
-Code Quality
 The code in this repository is structured and written for readability and efficiency:
-
-Clear, consistent naming conventions for variables and functions.
-
-Well-commented sections to explain key logic.
-
-Model training and Streamlit app are separated into different scripts to ensure modularity.
+- Clear, consistent **naming conventions** for variables and functions.
+- Well-commented sections to explain key logic.
+- Model training and Streamlit app are separated into different scripts to ensure modularity.
 
 The Streamlit app allows users to interact with the model easily without requiring deep technical knowledge.
 
-Evaluation Criteria
-Functionality
-The model correctly classifies SMS messages as "Spam" or "Not Spam".
+---
 
-The Streamlit app is fully functional and intuitive.
+## Evaluation Criteria
 
-Code Quality
-The code is well-structured, readable, and modular.
+### Functionality
+- The model correctly classifies SMS messages as **Spam** or **Not Spam**.
+- The Streamlit app is fully functional and intuitive.
 
-Proper variable and function names.
+### Code Quality
+- The code is well-structured, readable, and modular.
+- Proper variable and function names.
+- Clear comments and documentation for the major steps.
 
-Clear comments and documentation for the major steps.
+### Innovation & Creativity
+- The app includes a simple yet effective user interface.
+- The model is trained using a **balanced dataset** and optimized for text classification tasks.
+- The app's design provides immediate feedback to the user, displaying whether the message is spam or not.
 
-Innovation & Creativity
-The app includes a simple yet effective user interface.
+### Documentation
+- Clear instructions on how to set up and run the project.
+- A description of the task and objectives.
+- Information on dependencies and project structure.
 
-The model is trained using a balanced dataset and optimized for text classification tasks.
+---
 
-The app's design provides immediate feedback to the user, displaying whether the message is spam or not.
+## Example Output
 
-Documentation
-Clear instructions on how to set up and run the project.
-
-A description of the task and objectives.
-
-Information on dependencies and project structure.
-
-Example Output
 When a user inputs an SMS message, the model will predict whether the message is spam or not:
 
-Example Input: "Congratulations, you've won a free iPhone!"
-Output: Spam
+### Example Input:
+"Congratulations, you've won a free iPhone!"
+- **Output**: Spam
 
-Example Input: "Hey, are we still meeting tomorrow?"
-Output: Not Spam
+### Example Input:
+"Hey, are we still meeting tomorrow?"
+- **Output**: Not Spam
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+---
 
+## License
+
+This project is licensed under the **MIT License**. See the `LICENSE` file for details.
