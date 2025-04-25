@@ -27,3 +27,10 @@ if st.button("Check Message"):
         prediction = model.predict(vectorized)
         result = "🚫 Spam" if prediction[0] == 1 else "✅ Not Spam"
         st.subheader(result)
+        
+# Footer
+st.divider()
+st.markdown(
+    "<p style='text-align: center;'>Made by <b>Anushka Joshi</b>.</p>", 
+    unsafe_allow_html=True
+)
