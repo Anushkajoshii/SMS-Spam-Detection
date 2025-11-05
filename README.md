@@ -81,12 +81,6 @@ This will launch the app in your web browser. Enter a message into the text box,
 
 ---
 
-## Code Quality
-
-The code in this repository is structured and written for readability and efficiency:
-- Clear, consistent **naming conventions** for variables and functions.
-- Well-commented sections to explain key logic.
-- Model training and Streamlit app are separated into different scripts to ensure modularity.
 
 The Streamlit app allows users to interact with the model easily without requiring deep technical knowledge.
 
@@ -98,10 +92,6 @@ The Streamlit app allows users to interact with the model easily without requiri
 - The model correctly classifies SMS messages as **Spam** or **Not Spam**.
 - The Streamlit app is fully functional and intuitive.
 
-### Code Quality
-- The code is well-structured, readable, and modular.
-- Proper variable and function names.
-- Clear comments and documentation for the major steps.
 
 ### Innovation & Creativity
 - The app includes a simple yet effective user interface.
